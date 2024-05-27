@@ -1,0 +1,427 @@
+{
+  "version": 4,
+  "terraform_version": "1.6.3",
+  "serial": 7,
+  "lineage": "9cb450b5-f0fe-2a8c-63b1-df34b2f87a02",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "aws_availability_zones",
+      "name": "avzone",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "all_availability_zones": null,
+            "exclude_names": null,
+            "exclude_zone_ids": null,
+            "filter": null,
+            "group_names": [
+              "ap-southeast-2"
+            ],
+            "id": "ap-southeast-2",
+            "names": [
+              "ap-southeast-2a",
+              "ap-southeast-2b",
+              "ap-southeast-2c"
+            ],
+            "state": "available",
+            "timeouts": null,
+            "zone_ids": [
+              "apse2-az3",
+              "apse2-az1",
+              "apse2-az2"
+            ]
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_vpc",
+      "name": "vpc",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-southeast-2:834745347697:vpc/vpc-0d452faad11918027",
+            "cidr_block": "10.199.0.0/16",
+            "cidr_block_associations": [
+              {
+                "association_id": "vpc-cidr-assoc-0e818334287ce5b18",
+                "cidr_block": "10.199.0.0/16",
+                "state": "associated"
+              }
+            ],
+            "default": false,
+            "dhcp_options_id": "dopt-079f60beed3611c4b",
+            "enable_dns_hostnames": true,
+            "enable_dns_support": true,
+            "enable_network_address_usage_metrics": false,
+            "filter": null,
+            "id": "vpc-0d452faad11918027",
+            "instance_tenancy": "default",
+            "ipv6_association_id": "",
+            "ipv6_cidr_block": "",
+            "main_route_table_id": "rtb-007a321adaf172570",
+            "owner_id": "834745347697",
+            "state": null,
+            "tags": {
+              "Name": "ind_prod_vpc",
+              "environment": "prod"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "route_table_private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-southeast-2:834745347697:route-table/rtb-0870b0fe04be634c3",
+            "id": "rtb-0870b0fe04be634c3",
+            "owner_id": "834745347697",
+            "propagating_vgws": [],
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "nat-016746da891292676",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              },
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "10.0.0.0/8",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "tgw-022b53fee4b0e345b",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              },
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "172.16.0.0/12",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "tgw-022b53fee4b0e345b",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              },
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "192.168.0.0/16",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "tgw-022b53fee4b0e345b",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "Name": "ind_indevinLtd_rt_2a",
+              "application": "VPC network",
+              "creator": "joshua.xu@inde.nz",
+              "environment": "prod",
+              "managedBy": "juan.rossi@indevin.com"
+            },
+            "tags_all": {
+              "Name": "ind_indevinLtd_rt_2a",
+              "application": "VPC network",
+              "creator": "joshua.xu@inde.nz",
+              "environment": "prod",
+              "managedBy": "juan.rossi@indevin.com"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-0d452faad11918027"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_vpc.vpc"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-southeast-2:834745347697:route-table/rtb-063bf6a74d7d2af59",
+            "id": "rtb-063bf6a74d7d2af59",
+            "owner_id": "834745347697",
+            "propagating_vgws": [],
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "nat-091b168d3c84c88fe",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              },
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "10.0.0.0/8",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "tgw-022b53fee4b0e345b",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              },
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "172.16.0.0/12",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "tgw-022b53fee4b0e345b",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              },
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "192.168.0.0/16",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "tgw-022b53fee4b0e345b",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "Name": "ind_indevinLtd_rt_2b",
+              "application": "VPC network",
+              "creator": "joshua.xu@inde.nz",
+              "environment": "prod",
+              "managedBy": "juan.rossi@indevin.com"
+            },
+            "tags_all": {
+              "Name": "ind_indevinLtd_rt_2b",
+              "application": "VPC network",
+              "creator": "joshua.xu@inde.nz",
+              "environment": "prod",
+              "managedBy": "juan.rossi@indevin.com"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-0d452faad11918027"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_vpc.vpc"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-0fac52376d1613cd2",
+            "route_table_id": "rtb-0870b0fe04be634c3",
+            "subnet_id": "subnet-05a9b8f3eb93a5c27",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_route_table.route_table_private",
+            "aws_subnet.subnet_private",
+            "data.aws_availability_zones.avzone",
+            "data.aws_vpc.vpc"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-01150ac6554730d75",
+            "route_table_id": "rtb-063bf6a74d7d2af59",
+            "subnet_id": "subnet-0f4bdae9aa75110e7",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_route_table.route_table_private",
+            "aws_subnet.subnet_private",
+            "data.aws_availability_zones.avzone",
+            "data.aws_vpc.vpc"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "subnet_private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-southeast-2:834745347697:subnet/subnet-05a9b8f3eb93a5c27",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-southeast-2a",
+            "availability_zone_id": "apse2-az3",
+            "cidr_block": "10.199.6.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-05a9b8f3eb93a5c27",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "834745347697",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "Name": "ind_indevinLtd_snet_2a",
+              "application": "VPC network",
+              "creator": "joshua.xu@inde.nz",
+              "environment": "prod",
+              "managedBy": "juan.rossi@indevin.com"
+            },
+            "tags_all": {
+              "Name": "ind_indevinLtd_snet_2a",
+              "application": "VPC network",
+              "creator": "joshua.xu@inde.nz",
+              "environment": "prod",
+              "managedBy": "juan.rossi@indevin.com"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-0d452faad11918027"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "data.aws_availability_zones.avzone",
+            "data.aws_vpc.vpc"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-southeast-2:834745347697:subnet/subnet-0f4bdae9aa75110e7",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-southeast-2b",
+            "availability_zone_id": "apse2-az1",
+            "cidr_block": "10.199.134.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-0f4bdae9aa75110e7",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "834745347697",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "Name": "ind_indevinLtd_snet_2b",
+              "application": "VPC network",
+              "creator": "joshua.xu@inde.nz",
+              "environment": "prod",
+              "managedBy": "juan.rossi@indevin.com"
+            },
+            "tags_all": {
+              "Name": "ind_indevinLtd_snet_2b",
+              "application": "VPC network",
+              "creator": "joshua.xu@inde.nz",
+              "environment": "prod",
+              "managedBy": "juan.rossi@indevin.com"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-0d452faad11918027"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "data.aws_availability_zones.avzone",
+            "data.aws_vpc.vpc"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
